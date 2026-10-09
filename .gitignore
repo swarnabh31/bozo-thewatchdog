@@ -1,0 +1,39 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage*
+*.sqlite*
+*.sqlite3
+
+# --- Runtime / user data (per-machine; never commit) ---
+# BoZo's local store: memory.db, bozo.log, prefs.json live here on end-user
+# machines under %APPDATA%/screen_copilot/ (Windows) or ~/.screen_copilot/ (others).
+# Listed as a safety net in case a dev accidentally creates one in-repo.
+screen_copilot/*.db
+screen_copilot/*.log
+screen_copilot/prefs.json
+
+# --- OS noise ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Large model weights (safety net — never commit a model) ---
+*.bin
+*.safetensors
+*.ckpt
+*.pt
+*.gguf

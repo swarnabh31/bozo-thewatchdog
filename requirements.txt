@@ -1,0 +1,17 @@
+# Runtime dependencies for BoZo, The Watch Dog.
+# Install into the SAME interpreter you run app.py with:
+#     python -m pip install -r requirements.txt
+#
+# `nvidia-ml-py` is optional — only needed for VRAM/GPU stats on NVIDIA GPUs
+# (the app falls back to `nvidia-smi`, then to "VRAM n/a", if it is absent).
+# `rapidocr-onnxruntime` is the default OCR engine; the app degrades to
+# Tesseract (pytesseract + the Tesseract binary) or to no OCR if it is missing.
+
+mss
+psutil
+requests
+Pillow
+pystray
+rapidocr-onnxruntime
+numpy
+nvidia-ml-py
